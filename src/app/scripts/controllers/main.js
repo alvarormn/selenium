@@ -10,11 +10,13 @@
 angular.module('pruebasApp')
   .controller('MainCtrl', function ($scope) {
 
-    $scope.print = function(f1){
-      if (f1) {
-        console.log('Hola');
+    $scope.response = function(f1){
+      if (f1 === 1) {
+        $scope.data = 'Adios';
+        $scope.show = 0;
         return;
       }
-      console.log('Adios');
+      $scope.data = 'Primero se dice hola y luego adios';
+      $scope.show = 1;
     };
   });

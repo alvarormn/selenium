@@ -9,11 +9,15 @@ var driver = new webdriver.Builder()
   .forBrowser('chrome')
   .build();
 
+  //driver.get('http://www.google.es');
+  //driver.get('http://localhost:9000/#!/');
+  driver.get('http://arodriguezm:urbaser@13@preappsp.urbaser.com/sitios/purchaser/purchaser_front_src/index.html#/compras/configuracion').then(function() {
 
-driver.get('http://localhost:9000').then(function(callBack,errBack){
-  console.log(callBack);
-    var element = driver.findElement(By.id('primero'));
-    //console.log(element);
-    driver.actions()
-      .mouseMove(element).click();
-});
+    driver.getTitle().then(function(title) {
+      console.log('Page title is: ' + title);
+    });
+
+
+    //var element = driver.findElement(By.className('glyphicon-menu-hamburger'));
+    //element.click();
+  });
