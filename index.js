@@ -11,7 +11,7 @@ var driver = new webdriver.Builder()
 
   //driver.get('http://www.google.es');
   //driver.get('http://localhost:9000/#!/');
-  driver.get('http://arodriguezm:urbaser@13@preappsp.urbaser.com/sitios/purchaser/purchaser_front_src/index.html#/compras/configuracion').then(function() {
+  driver.get('http://USER:PASS@URL').then(function() {
 
     driver.getTitle().then(function(title) {
       console.log('Page title is: ' + title);
